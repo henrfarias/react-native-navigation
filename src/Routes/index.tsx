@@ -1,21 +1,20 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Home from '../Views/Home';
-import Details from '../Views/Details';
-import { RootStackParamsList } from '../types/RootStackParams';
+import { AuthStackParamsList } from '../types/AuthStackParams';
 
-const Stack = createStackNavigator<RootStackParamsList>();
+import AuthStack from './AuthStack';
+import MainStack from './Tabs';
+
+const Stack = createStackNavigator<AuthStackParamsList>();
+const authUser = true;
 
 const Routes: React.FC = () => {
- return (
-   <NavigationContainer>
-    <Stack.Navigator initialRouteName='Home'>
-      <Stack.Screen name='Home' component={Home} />
-      <Stack.Screen name='Details' component={Details} />
-    </Stack.Navigator>
-   </NavigationContainer>
- ); 
-}
+  return (
+    <NavigationContainer>
+      {authUser ? <MainStack /> : <AuthStack />}
+    </NavigationContainer>
+  );
+};
 
 export default Routes;
