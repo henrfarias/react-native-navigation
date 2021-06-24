@@ -1,5 +1,4 @@
 import React from 'react';
-import { Text } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from '../Views/Home';
@@ -9,7 +8,7 @@ import { IconName } from '../types/Ionicons';
 
 const Tabs = createBottomTabNavigator<MainTabsParamsList>();
 
-const MainStack: React.FC = () => {
+const MainTabs: React.FC = () => {
   return (
     <>
       <Tabs.Navigator
@@ -33,4 +32,4 @@ const MainStack: React.FC = () => {
   );
 };
 
-export default MainStack;
+export default MainTabs;

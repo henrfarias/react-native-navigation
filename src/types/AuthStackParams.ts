@@ -2,8 +2,8 @@ import { RouteProp } from '@react-navigation/native';
 import { StackScreenProps } from '@react-navigation/stack';
 
 export type AuthStackParamsList = {
-  SignIn: {} | undefined;
-  Register: {} | undefined;
+  SignIn?: {};
+  Register?: {};
 };
 
 export type SignInStackProps = StackScreenProps<AuthStackParamsList, 'SignIn'>;

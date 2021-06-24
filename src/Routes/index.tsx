@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { AuthStackParamsList } from '../types/AuthStackParams';
 
 import AuthStack from './AuthStack';
-import MainStack from './Tabs';
+import DrawerScreens from './Drawer';
 
 const Stack = createStackNavigator<AuthStackParamsList>();
 const authUser = true;
@@ -12,7 +12,7 @@ const authUser = true;
 const Routes: React.FC = () => {
   return (
     <NavigationContainer>
-      {authUser ? <MainStack /> : <AuthStack />}
+      {authUser ? <DrawerScreens /> : <AuthStack />}
     </NavigationContainer>
   );
 };

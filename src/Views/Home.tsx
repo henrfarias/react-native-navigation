@@ -7,10 +7,6 @@ const Home: React.FC<HomeTabProps> = ({ navigation }) => {
   return (
     <ScreenContainer>
       <Text>Home Page</Text>
-      <Button
-        title='Go to Details'
-        onPress={() => navigation.navigate('Details')}
-      />
     </ScreenContainer>
   );
 };

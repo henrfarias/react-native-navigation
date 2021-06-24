@@ -1,8 +1,8 @@
 import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 
 export type MainTabsParamsList = {
-  Home: {} | undefined;
-  Details: {} | undefined;
+  Home?: {};
+  Details?: {};
 };
 
 export type HomeTabProps = BottomTabScreenProps<
