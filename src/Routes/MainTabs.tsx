@@ -6,6 +6,7 @@ import { IconName } from '../types/Ionicons';
 
 import Home from '../Views/Home';
 import Search from '../Views/Search';
+import HomeStack from './HomeStack';
 
 const Tabs = createBottomTabNavigator<TabsParamsList>();
 
@@ -26,7 +27,7 @@ const MainTabs: React.FC = () => {
           },
         })}
       >
-        <Tabs.Screen name='Home' component={Home} />
+        <Tabs.Screen name='Home' component={HomeStack} />
         <Tabs.Screen name='Search' component={Search} />
       </Tabs.Navigator>
     </>

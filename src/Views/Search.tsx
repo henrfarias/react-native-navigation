@@ -12,7 +12,7 @@ const Search: React.FC<SearchTabProps> = ({ navigation }) => {
         title='Search: React Native'
         onPress={() => navigation.navigate('Home', {
           screen: 'Details',
-          params: { name: 'React Native Searched'}
+          params: { name: 'React Native'}
         })}
       />
     </ScreenContainer>

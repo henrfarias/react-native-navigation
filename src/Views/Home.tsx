@@ -9,7 +9,7 @@ const Home: React.FC<HomeStackProps> = ({ navigation }) => {
       <Text>Home Page</Text>
       <Button
         title='React Native'
-        onPress={() => navigation.navigate('Details', { name: 'React Native' })}
+        onPress={() => navigation.push('Details', { name: 'React Native' })}
       />
     </ScreenContainer>
   );

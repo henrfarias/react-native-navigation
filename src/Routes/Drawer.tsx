@@ -7,9 +7,10 @@ import {
 } from '@react-navigation/drawer';
 import { DrawerParamsList } from '../types/DrawerParams';
 
+import { AuthContext } from '../Contexts/AuthContext';
+
 import MainTabs from './MainTabs';
 import Profile from '../Views/Profile';
-import { AuthContext } from '../Contexts/AuthContext';
 
 const Drawer = createDrawerNavigator<DrawerParamsList>();
 
