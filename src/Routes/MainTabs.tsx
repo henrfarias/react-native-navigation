@@ -1,12 +1,13 @@
 import React from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Home from '../Views/Home';
-import Details from '../Views/Details';
-import { MainTabsParamsList } from '../types/MainTabsParams';
+import { TabsParamsList } from '../types/TabsParams';
 import { IconName } from '../types/Ionicons';
 
-const Tabs = createBottomTabNavigator<MainTabsParamsList>();
+import Home from '../Views/Home';
+import Search from '../Views/Search';
+
+const Tabs = createBottomTabNavigator<TabsParamsList>();
 
 const MainTabs: React.FC = () => {
   return (
@@ -18,15 +19,15 @@ const MainTabs: React.FC = () => {
               
             if (route.name === 'Home') {
               iconName = focused ? 'home' : 'home-outline';
-            } else if (route.name === 'Details') {
-              iconName = focused ? 'document-text' : 'document-text-outline';
+            } else if (route.name === 'Search') {
+              iconName = focused ? 'search' : 'search-outline';
             }
             return <Ionicons name={iconName} size={size} color={color} />;
           },
         })}
       >
         <Tabs.Screen name='Home' component={Home} />
-        <Tabs.Screen name='Details' component={Details} />
+        <Tabs.Screen name='Search' component={Search} />
       </Tabs.Navigator>
     </>
   );

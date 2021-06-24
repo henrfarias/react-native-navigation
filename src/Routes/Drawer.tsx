@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   createDrawerNavigator,
   DrawerItem,
@@ -9,14 +9,16 @@ import { DrawerParamsList } from '../types/DrawerParams';
 
 import MainTabs from './MainTabs';
 import Profile from '../Views/Profile';
+import { AuthContext } from '../Contexts/AuthContext';
 
 const Drawer = createDrawerNavigator<DrawerParamsList>();
 
 const CustomDrawerContent: React.FC<DrawerContentComponentProps> = (props) => {
+  const { signOut } = useContext(AuthContext);
   return (
     <>
       <DrawerItemList {...props} />
-      <DrawerItem label='SignOut' onPress={() => alert('sign out!')} />
+      <DrawerItem label='SignOut' onPress={signOut} />
     </>
   );
 };

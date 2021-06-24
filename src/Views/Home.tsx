@@ -1,12 +1,16 @@
 import React from 'react';
 import { Text, Button, StyleSheet } from 'react-native';
 import ScreenContainer from '../Components/ScreenContainer';
-import { HomeTabProps } from '../types/MainTabsParams';
+import { HomeStackProps } from '../types/HomeStackParams';
 
-const Home: React.FC<HomeTabProps> = ({ navigation }) => {
+const Home: React.FC<HomeStackProps> = ({ navigation }) => {
   return (
     <ScreenContainer>
       <Text>Home Page</Text>
+      <Button
+        title='React Native'
+        onPress={() => navigation.navigate('Details', { name: 'React Native' })}
+      />
     </ScreenContainer>
   );
 };
